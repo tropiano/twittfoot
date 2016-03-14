@@ -1,0 +1,57 @@
+.widget-numberchange {
+    background-color: #96bf48;
+}
+
+.widget-numberchange h1 {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.widget-numberchange h2 {
+    color: #fff;
+}
+
+.widget-numberchange .previous {
+    font-weight: 500;
+    font-size: 20px;
+    color: #fff;
+}
+
+.widget-numberchange .more-info {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.widget-numberchange .updated-at {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+@font-face {
+    font-family: 'Glyphicons Halflings';
+
+    src: url('fonts/glyphicons-halflings-regular.eot');
+    src: url('fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('fonts/glyphicons-halflings-regular.woff') format('woff'), url('fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+
+.glyphicon {
+    position: relative;
+    top: 15px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.glyphicon-minus:before {
+    content: "\2212";
+}
+
+.glyphicon-circle-arrow-up:before {
+    content: "\e113";
+}
+
+.glyphicon-chevron-down:before {
+    content: "\e114";
+}

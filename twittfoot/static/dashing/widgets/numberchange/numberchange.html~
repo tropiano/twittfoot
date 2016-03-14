@@ -1,0 +1,10 @@
+<div>
+    <h1>{ data.title }</h1>
+    <h2 rv-dashing-numberchange="data">
+        { data.value }
+        <span rv-class="data.setGlyphicon < value previous"></span>
+    </h2>
+    <p class="previous">Previous: { data.previous }</p>
+    <p class="more-info">{ data.more_info }</p>
+    <p class="updated-at">{ data.updated_at }</p>
+</div>
