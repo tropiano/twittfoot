@@ -1,11 +1,17 @@
 <div>
     <h1>{ title }</h1>
-    <ul>
-      <li rv-each-item="data">
-        <span class="label">{ item.label }</span>
-        <span class="value">{ item.value }</span>
-      </li>
-    </ul>
+	<table border="0" style="width:100%">
+      <tr>
+        <td><b>Team</b></td>
+        <td><b>Followers</b></td>
+        <td><b>Tweets</b></td>
+      </tr>
+	  <tr rv-each-item="data">
+        <td class="label" >{ item.user }</td>
+        <td class="value">{ item.followers }</td>
+        <td class="value">{ item.tweets }</td>
+      </tr>
+    </table>
     <p class="more-info">{ moreInfo }</p>
     <p class="updated-at">{ updatedAt }</p>
 </div>

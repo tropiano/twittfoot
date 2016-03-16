@@ -94,10 +94,12 @@ class TwitterWidget(ListWidget):
     title = 'Twitter Followers'
     #users = 
 
-    users = ['Inter', 'realmadriden', 'FCBarcelona', 'FCBayern', 'acmilan']    
-    followers = [str(make_twitter_request(twitter_api.users.lookup, screen_name=user)[0]['followers_count']) for user in users]
+    users = ['Inter', 'realmadriden', 'FCBarcelona', 'FCBayern', 'acmilan', 'manutd']    
+    names = [make_twitter_request(twitter_api.users.lookup, screen_name=user)[0]['name'] for user in users]
+    followers = [make_twitter_request(twitter_api.users.lookup, screen_name=user)[0]['followers_count'] for user in users]
+    tweets = [make_twitter_request(twitter_api.users.lookup, screen_name=user)[0]['statuses_count'] for user in users]
     updated_at = ''
-    data = [ {'label': u, 'value': f} for u,f in zip(users,followers)]
+    data = [ {'user': u, 'followers': f, 'tweets': t} for u,f,t in sorted(zip(names,followers,tweets), key = lambda t: t[1], reverse=True)]
 
     def get_user(self):
         return self.user

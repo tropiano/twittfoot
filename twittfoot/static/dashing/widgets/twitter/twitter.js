@@ -5,7 +5,7 @@ Dashing.widgets.Twitter = function (dashboard) {
         widget;
     this.__init__ = Dashing.utils.widgetInit(dashboard, 'twitter');
     this.row = 1;
-    this.col = 1;
+    this.col = 2;
     this.scope = {};
     this.getWidget = function () {
         return widget;

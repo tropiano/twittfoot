@@ -49,7 +49,7 @@ dashboard.addWidget('current_valuation_widget', 'Number', {
 	}
     });
 */
-
+/*
 dashboard.addWidget('number_change_test_widget', 'Numberchange', {
 	getData: function () {
 	    var self = this;
@@ -64,7 +64,7 @@ dashboard.addWidget('number_change_test_widget', 'Numberchange', {
 	backgroundcolor: '#96bf48'
 
 });
-
+*/
 /*
 dashboard.addWidget('convergence_widget', 'Graph', {
 	getData: function () {
