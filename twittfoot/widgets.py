@@ -1,6 +1,7 @@
 from django.conf import settings
 from dashing.widgets import Widget, NumberWidget, ListWidget
 import twitter
+import json as js
 
 def oauth_login():
     # XXX: Go to http://twitter.com/apps/new to create an app and get values
@@ -8,11 +9,13 @@ def oauth_login():
     # empty string values that are defined as placeholders.
     # See https://dev.twitter.com/docs/auth/oauth for more information 
     # on Twitter's OAuth implementation.
-    
-    CONSUMER_KEY = 'xxx'
-    CONSUMER_SECRET = 'xxx'
-    OAUTH_TOKEN = 'xxx'
-    OAUTH_TOKEN_SECRET = 'xxx'
+    f = open("twittfoot/credentials.txt")
+    cred = js.loads(f.read())
+	
+    CONSUMER_KEY = cred['consumer_key']
+    CONSUMER_SECRET = cred['consumer_secret']
+    OAUTH_TOKEN = cred['oauth_token']
+    OAUTH_TOKEN_SECRET = cred['oauth_secret']
     
     auth = twitter.oauth.OAuth(OAUTH_TOKEN, OAUTH_TOKEN_SECRET,
                                CONSUMER_KEY, CONSUMER_SECRET)
